@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vZEV Portal – Software für Zusammenschlüsse zum Eigenverbrauch (ZEV)</title>
+<meta name="description" content="Das vZEV Portal verwaltet euren Zusammenschluss zum Eigenverbrauch: Messdaten, PV-Produktion, automatische Abrechnung und transparente Auswertung für alle Teilnehmer.">
+<meta name="keywords" content="ZEV, Zusammenschluss Eigenverbrauch, vZEV, PV-Strom, Solaranlage, Abrechnung, Portal, Schweiz, Photovoltaik, Eigenverbrauch optimieren">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vzev.be/">
+<meta name="google-site-verification" content="KR7M2dEDhVfOa9vNTKefOe7dUgr4kgUSFmT8QQrWwrI" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="vZEV Portal – Software für Zusammenschlüsse zum Eigenverbrauch">
+<meta property="og:description" content="Messdaten, PV-Produktion, automatische Abrechnung und transparente Auswertung — alles in einem Portal für euren ZEV.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vzev.be/">
+<meta property="og:image" content="https://vzev.be/vzev_header.jpg">
+<meta property="og:locale" content="de_CH">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "vZEV Portal",
+  "description": "Webportal für Zusammenschlüsse zum Eigenverbrauch (ZEV) in der Schweiz. Verwaltung von Messdaten, PV-Produktion, Abrechnung und Teilnehmerportal.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://vzev.be",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "CHF"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "beesimple GmbH",
+    "url": "https://beesimple.ch"
+  },
+  "inLanguage": "de",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Switzerland"
+  }
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a1a1a;background:#fff;line-height:1.7}
+a{color:inherit;text-decoration:none}
+
+.hero{background:#0F6E56;color:#E1F5EE;padding:100px 24px 90px;text-align:center;position:relative;overflow:hidden;background-image:url('vzev_header.jpg');background-size:cover;background-position:center 60%}
+.hero-bg{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom, rgba(4,52,44,0.50) 0%, rgba(8,80,65,0.45) 100%)}
+.hero-inner{position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.2);color:#fff;font-size:13px;padding:6px 16px;border-radius:20px;margin-bottom:24px;letter-spacing:0.5px}
+.hero h1{font-size:56px;font-weight:600;line-height:1.15;color:#fff;margin-bottom:20px}
+.hero h1 em{color:#fff;font-style:normal}
+.hero p{font-size:20px;color:#fff;max-width:580px;margin:0 auto 40px;line-height:1.7}
+.hero-cta{display:inline-block;background:#EF9F27;color:#412402;font-weight:600;padding:16px 40px;border-radius:8px;font-size:17px}
+.hero-cta:hover{background:#FAC775}
+
+.section{padding:64px 24px;max-width:960px;margin:0 auto}
+.section-label{font-size:13px;color:#0F6E56;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:500}
+.section h2{font-size:34px;font-weight:500;margin-bottom:14px}
+.section p.lead{font-size:18px;color:#555;max-width:600px;margin-bottom:48px}
+
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:48px}
+.kpi{background:#E1F5EE;border-radius:10px;padding:20px 16px;text-align:center}
+.kpi-val{font-size:28px;font-weight:500;color:#085041;line-height:1}
+.kpi-lbl{font-size:12px;color:#0F6E56;margin-top:4px}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.feature-card{border:1px solid #e8f5f0;border-radius:12px;padding:24px;background:#fff}
+.feature-card:hover{border-color:#5DCAA5}
+.feature-icon{width:40px;height:40px;border-radius:10px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px}
+.feature-card h3{font-size:17px;font-weight:500;margin-bottom:8px;color:#1a1a1a}
+.feature-card p{font-size:15px;color:#666;line-height:1.6}
+
+.bg-tint{background:#F0FAF6}
+.steps-wrap{padding:64px 24px}
+.steps-inner{max-width:960px;margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-top:0}
+.step{text-align:center}
+.step-num{width:44px;height:44px;border-radius:50%;background:#0F6E56;color:#9FE1CB;font-size:16px;font-weight:500;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h3{font-size:15px;font-weight:500;margin-bottom:6px}
+.step p{font-size:13px;color:#666}
+
+hr{border:none;border-top:1px solid #e8f5f0}
+
+.contact-section{padding:64px 24px;max-width:600px;margin:0 auto;text-align:center}
+.contact-section h2{font-size:28px;font-weight:500;margin-bottom:8px}
+.contact-section p.lead{font-size:15px;color:#666;margin-bottom:32px}
+form{text-align:left}
+.form-row{margin-bottom:16px}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:13px;color:#555;margin-bottom:5px}
+input,textarea,select{width:100%;padding:10px 12px;border:1px solid #d1e9e0;border-radius:8px;font-size:14px;background:#fff;color:#1a1a1a;font-family:inherit;outline:none}
+input:focus,textarea:focus,select:focus{border-color:#0F6E56}
+textarea{resize:vertical;min-height:100px}
+.submit-btn{width:100%;background:#0F6E56;color:#E1F5EE;border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px}
+.submit-btn:hover{background:#085041}
+
+.footer{background:#085041;color:#5DCAA5;text-align:center;padding:36px 24px;font-size:13px;line-height:2}
+.footer strong{color:#9FE1CB}
+.footer a{color:#5DCAA5}
+.footer a:hover{color:#9FE1CB}
+
+@media(max-width:600px){
+  .hero h1{font-size:30px}
+  .form-row-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Zusammenschluss zum Eigenverbrauch</div>
+    <h1>Euer PV-Strom.<br><em>Transparent verwaltet.</em></h1>
+    <p>Das vZEV Portal gibt jedem Teilnehmer Einblick in seinen Energieverbrauch — und dem Administrator alle Werkzeuge für eine professionelle Abrechnung.</p>
+    <a href="#kontakt" class="hero-cta">Demo anfragen</a>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Warum vZEV Portal</div>
+  <h2>Alles was ein ZEV braucht</h2>
+  <p class="lead">Von der Messdaten-Erfassung bis zur fertigen Rechnung — in einem Portal für alle Teilnehmer.</p>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="kpi-val">100%</div><div class="kpi-lbl">Transparenz für Teilnehmer</div></div>
+    <div class="kpi"><div class="kpi-val">&lt;200ms</div><div class="kpi-lbl">Ladezeit dank Caching</div></div>
+    <div class="kpi"><div class="kpi-val">OWASP</div><div class="kpi-lbl">Top 10 abgesichert</div></div>
+    <div class="kpi"><div class="kpi-val">2FA</div><div class="kpi-lbl">Zwei-Faktor-Login</div></div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Dashboard für Teilnehmer</h3>
+      <p>Jeder Teilnehmer sieht seinen Verbrauch, seinen Anteil am PV-Strom und seine Kostenentwicklung — monatlich und als Jahresvergleich.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📄</div>
+      <h3>Automatische Abrechnung</h3>
+      <p>Quartalsfakturen als PDF, direkter Versand per E-Mail. Unterstützt BKW-Tarife und individuelle Konfiguration.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">☀️</div>
+      <h3>PV-Anlage im Blick</h3>
+      <p>Soll/Ist-Vergleich der PV-Produktion mit automatischer Wirkungsgrad-Kalibrierung. Wetterdaten aus Open-Meteo gecacht.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📥</div>
+      <h3>Einfache Dateneingabe</h3>
+      <p>BKW-Energieübersicht per Excel-Import. SolarMan-Export für PV-Produktion. Keine manuelle Tabellenarbeit mehr.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Sicherheit nach OWASP</h3>
+      <p>CSRF-Schutz, Brute-Force-Sperre, 2FA, Audit-Log, Session-Timeout — alle Top-10-Schwachstellen adressiert.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <h3>Mobil &amp; Responsive</h3>
+      <p>Das Portal funktioniert auf Smartphone, Tablet und Desktop — ohne App-Installation.</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="bg-tint">
+<div class="steps-wrap">
+<div class="steps-inner">
+  <div class="section-label">So funktioniert's</div>
+  <h2 style="font-size:28px;font-weight:500;margin-bottom:12px">In drei Schritten live</h2>
+  <p style="font-size:16px;color:#555;margin-bottom:48px">Vom leeren Server zum laufenden Portal — in wenigen Stunden.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Einrichtung</h3>
+      <p>Server, Datenbank und Teilnehmer werden konfiguriert. Jede Instanz ist vollständig isoliert.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Daten erfassen</h3>
+      <p>Monatlich BKW-Export importieren, PV-Daten ergänzen. Der Rest läuft automatisch.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Abrechnen</h3>
+      <p>Rechnungen auf Knopfdruck erstellen und direkt an Teilnehmer versenden.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<hr>
+
+<div class="contact-section" id="kontakt">
+  <div class="section-label" style="text-align:center">Kontakt</div>
+  <h2>Interesse an vZEV Portal?</h2>
+  <p class="lead">Schreib uns — wir melden uns innerhalb von 24 Stunden.</p>
+  <form action="https://formsubmit.co/contact@vzev.be" method="POST">
+    <input type="hidden" name="_subject" value="Neue Anfrage von vzev.be">
+    <input type="hidden" name="_next" value="https://vzev.be/?danke=1">
+    <input type="hidden" name="_captcha" value="false">
+    <div class="form-row-2">
+      <div class="form-row"><label>Vorname</label><input type="text" name="vorname" placeholder="Max" required></div>
+      <div class="form-row"><label>Nachname</label><input type="text" name="nachname" placeholder="Muster" required></div>
+    </div>
+    <div class="form-row"><label>E-Mail</label><input type="email" name="email" placeholder="max@beispiel.ch" required></div>
+    <div class="form-row">
+      <label>ZEV-Grösse (Anzahl Teilnehmer)</label>
+      <select name="groesse">
+        <option>1–5</option>
+        <option>6–15</option>
+        <option>16–30</option>
+        <option>30+</option>
+      </select>
+    </div>
+    <div class="form-row"><label>Nachricht</label><textarea name="nachricht" placeholder="Was darf ich für euch tun?"></textarea></div>
+    <button type="submit" class="submit-btn">Anfrage absenden</button>
+  </form>
+</div>
+
+<div class="footer">
+  <strong>vZEV Portal</strong><br>
+  Entwickelt von <a href="https://beesimple.ch" target="_blank">beesimple GmbH</a> · Schweiz<br>
+  <a href="mailto:contact@vzev.be">contact@vzev.be</a>
+</div>
+
+</body>
+</html>
