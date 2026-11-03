@@ -1,15 +1,10 @@
 # vzev.be
 
-Static marketing website for www.vzev.be (single `index.html`).
+Static website for www.vzev.be (single `index.html`).
 
 ## Deploy
 
-Not automated. The live copy is `~/vzev.be/` on the Plesk server (`ssh hof5`).
-Copy changed files manually, e.g.:
-
-```bash
-scp index.html hof5:~/vzev.be/index.html
-```
+A push to `main` is deployed automatically via Plesk Git (GitHub webhook).
 
 ## Contact form
 
