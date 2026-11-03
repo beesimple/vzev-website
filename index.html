@@ -101,6 +101,8 @@ input:focus,textarea:focus,select:focus{border-color:#0F6E56}
 textarea{resize:vertical;min-height:100px}
 .submit-btn{width:100%;background:#0F6E56;color:#E1F5EE;border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;margin-top:8px}
 .submit-btn:hover{background:#085041}
+.submit-btn:disabled{opacity:.7;cursor:wait}
+.form-success{max-width:560px;margin:0 auto 20px;padding:14px 16px;border-radius:8px;background:#E1F5EE;color:#085041;font-weight:500;text-align:center}
 
 .footer{background:#085041;color:#5DCAA5;text-align:center;padding:36px 24px;font-size:13px;line-height:2}
 .footer strong{color:#9FE1CB}
@@ -206,7 +208,8 @@ textarea{resize:vertical;min-height:100px}
   <div class="section-label" style="text-align:center">Kontakt</div>
   <h2>Interesse an vZEV Portal?</h2>
   <p class="lead">Schreib uns — wir melden uns innerhalb von 24 Stunden.</p>
-  <form action="https://formsubmit.co/contact@vzev.be" method="POST">
+  <div id="form-danke" class="form-success" role="status" hidden>Danke für deine Anfrage! Wir melden uns innerhalb von 24 Stunden.</div>
+  <form id="kontakt-form" action="https://formsubmit.co/contact@vzev.be" method="POST">
     <input type="hidden" name="_subject" value="Neue Anfrage von vzev.be">
     <input type="hidden" name="_next" value="https://vzev.be/?danke=1">
     <input type="hidden" name="_captcha" value="false">
@@ -235,5 +238,30 @@ textarea{resize:vertical;min-height:100px}
   <a href="mailto:contact@vzev.be">contact@vzev.be</a>
 </div>
 
+<script>
+// Kontaktformular: Doppelklick verhindern (FormSubmit braucht einige Sekunden) und Bestätigung nach Rückkehr anzeigen
+(function () {
+  var form = document.getElementById("kontakt-form");
+  if (!form) return;
+  form.addEventListener("submit", function () {
+    var btn = form.querySelector("button[type=submit]");
+    btn.disabled = true;
+    btn.textContent = "Wird gesendet …";
+  });
+  // Zurück-Taste: Seite aus dem Browser-Cache -> Knopf wieder freigeben
+  window.addEventListener("pageshow", function () {
+    var btn = form.querySelector("button[type=submit]");
+    btn.disabled = false;
+    btn.textContent = "Anfrage absenden";
+  });
+  if (new URLSearchParams(location.search).get("danke") === "1") {
+    document.getElementById("form-danke").hidden = false;
+    form.hidden = true;
+    var toKontakt = function () { document.getElementById("kontakt").scrollIntoView(); };
+    toKontakt();
+    window.addEventListener("load", toKontakt);
+  }
+})();
+</script>
 </body>
 </html>
